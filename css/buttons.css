@@ -1,0 +1,47 @@
+.btn {
+	display: block;
+	text-transform: uppercase;
+	margin: 0 auto;
+	text-align: center;
+	outline-style: none;
+}
+
+.btn-rounded {
+	margin-top: 4.55%;
+	border-radius: 27px;
+	border: 2px solid white;
+	padding: 13px 29px;
+	font-size: 17px;
+	text-transform: uppercase;
+	color: #FFF;
+	background: transparent;
+} 
+
+.down-btn {
+	border: 6px double #7a7373;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+	background-color: transparent;
+	margin-top: 12%;
+	padding: 14px 11px;
+	font-size: 15px;
+}
+
+.carousel {
+	font-size: 0;
+	margin: 0 auto;
+	text-align: center;
+	width: 60px;
+}
+.carousel-indicator {
+	width: 10px;
+height: 10px;
+background-color: #959595;
+-webkit-border-radius: 50%;
+        border-radius: 50%;
+	    display: inline-block;
+	    margin: 5px;
+}
+.active {
+	background-color: #2b2b2b;
+}
