@@ -35,13 +35,38 @@
 }
 .carousel-indicator {
 	width: 10px;
-height: 10px;
-background-color: #959595;
--webkit-border-radius: 50%;
+	height: 10px;
+	background-color: #959595;
+	-webkit-border-radius: 50%;
         border-radius: 50%;
-	    display: inline-block;
-	    margin: 5px;
+	display: inline-block;
+    margin: 5px;
 }
+
 .active {
 	background-color: #2b2b2b;
+}
+
+.career-btn {
+	line-height: 30px;
+	margin-top: 3.89%;
+}
+
+.carousel--large {
+	width: 112px;
+}
+
+.carousel--large-indicator {
+	width: 18px;
+	height: 18px;
+	background: none;
+	-webkit-border-radius: 50%;
+        	border-radius: 50%;
+    border: 1px solid #c2c2c2;    	
+    margin: 4px;
+
+}
+
+.carousel--large-indicator--active {
+	border-color: #000;
 }

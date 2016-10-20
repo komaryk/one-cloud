@@ -1,6 +1,6 @@
 .section-about {}
 .advantage-list {
-	margin: 8.5% 0;
+	margin: 8.5% 0 12.5%;
 	width: 103%;
 }
 .advantage-item {
@@ -15,6 +15,7 @@
 	text-transform: uppercase;
 	margin-bottom: 31px;
 	position: relative;
+	padding-top: 3.8% 0;
 }
 .advantage-title:after {
 	position: absolute;
@@ -28,23 +29,39 @@
     background-color: #0075d0;
 }
 
-.advantage-caption {}
-
 .section-figures {
 	background-image: url(../img/bg-figures.jpg);
 	background-position: 50%;
+    z-index: -2;
+    padding-top: 3.8%;
 }
 
-.section-figures:before
+.section-figures:after
 {
     position: absolute;
-    z-index: 99;
+    z-index: -1;
+    content: "";
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
 	background-color: rgba(2, 116, 188, 0.58);
 }
-.figures-list {}
-.figures-item {}
-.figures-title {}
+.figures-list {
+
+
+}
+.figures-item {
+	font-size: 19px;
+	color: white;
+	text-align: center;
+}
+.figures-item span {
+	font-size: 50px;
+	font-weight: 700;
+	display: block;
+	margin: 8% auto 6%;
+}
+.figures-title {
+	
+}
