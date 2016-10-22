@@ -59,9 +59,18 @@
     border-bottom: 5px solid #0075d0;
 }
 
+.portfolio
+{
+    font-size: 0;
+}
+
 .portfolio-item
 {
     position: relative;
+
+    display: inline-block;
+
+    width: 25%;
 }
 .portfolio-item:hover
 {

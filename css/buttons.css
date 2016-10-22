@@ -1,72 +1,121 @@
-.btn {
-	display: block;
-	text-transform: uppercase;
-	margin: 0 auto;
-	text-align: center;
-	outline-style: none;
+.btn
+{
+    display: block;
+
+    margin: 0 auto;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    outline-style: none;
 }
 
-.btn-rounded {
-	margin-top: 4.55%;
-	border-radius: 27px;
-	border: 2px solid white;
-	padding: 13px 29px;
-	font-size: 17px;
-	text-transform: uppercase;
-	color: #FFF;
-	background: transparent;
-} 
+.btn-rounded
+{
+    font-size: 17px;
 
-.down-btn {
-	border: 6px double #7a7373;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
-	background-color: transparent;
-	margin-top: 12%;
-	padding: 14px 11px;
-	font-size: 15px;
+    margin-top: 4.55%;
+    padding: 13px 18px;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    border: 2px solid white;
+    border-radius: 27px;
+    background: transparent;
 }
 
-.carousel {
-	font-size: 0;
-	margin: 0 auto;
-	text-align: center;
-	width: 60px;
+.down-btn
+{
+    font-size: 15px;
+
+    margin-top: 12%;
+    padding: 14px 11px;
+
+    border: 6px double #7a7373;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background-color: transparent;
 }
-.carousel-indicator {
-	width: 10px;
-	height: 10px;
-	background-color: #959595;
-	-webkit-border-radius: 50%;
-        border-radius: 50%;
-	display: inline-block;
+
+.carousel
+{
+    font-size: 0;
+
+    width: 60px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+.carousel-indicator
+{
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
     margin: 5px;
+
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #959595;
 }
 
-.active {
-	background-color: #2b2b2b;
+.active
+{
+    background-color: #2b2b2b;
 }
 
-.career-btn {
-	line-height: 30px;
-	margin-top: 3.89%;
+.career-btn
+{
+    line-height: 30px;
+
+    margin-top: 4%;
 }
 
-.carousel--large {
-	width: 112px;
+.carousel--large
+{
+    width: 112px;
 }
 
-.carousel--large-indicator {
-	width: 18px;
-	height: 18px;
-	background: none;
-	-webkit-border-radius: 50%;
-        	border-radius: 50%;
-    border: 1px solid #c2c2c2;    	
+.carousel--large-indicator
+{
+    width: 18px;
+    height: 18px;
     margin: 4px;
 
+    border: 1px solid #c2c2c2;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background: none;
 }
 
-.carousel--large-indicator--active {
-	border-color: #000;
+.carousel--large-indicator--active
+{
+    border-color: #000;
+}
+
+.btn-link
+{
+    font-size: 15px;
+
+    display: block;
+
+    padding: 0 20px 25px;
+
+    text-decoration: none;
+
+    color: #6e6e6e;
+}
+
+
+
+
+.btn-subscribe
+{
+    margin: 10px 0;
+    padding: 15px 30px;
+
+    color: #fff;
+    border: 0;
+    background-color: #3d3d3d;
 }

@@ -1,13 +1,19 @@
 .team-list {
-	margin-top: 8%;
+	margin-top: 6.9%;
 	text-align: center;
 	width: 102.5%;
 	margin-left: -1.25%;
+	font-size: 0;
 }
 
 .team-member {
 	box-sizing: border-box;
 	padding: 15px;
+	
+	display: inline-block;
+	font-size: 15px;
+	
+	width: 25%;
 }
 
 .team-image {
@@ -15,8 +21,8 @@
 }
 .team-name {
 	font-weight: 700;
-	margin-top: 29px;
-	margin-bottom: 18px;
+	margin-top: 9.5%;
+	margin-bottom: 5.7%;
 }
 
 .team-position {
@@ -37,7 +43,7 @@
 
 .section-join {
 	background-color: #0075d0;
-	margin-top: 8.5%;
+	margin-top: 9.2%;
 	padding: 50px 0;
 }
 

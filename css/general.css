@@ -9,51 +9,71 @@ GENERAL
 ====================
  */
 
-.wrap {
-	font-family: "Roboto", sans-serif;
+.wrap
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
 }
-.section {
-	position: relative;
-	padding-top: 11.4%;
+.section
+{
+    position: relative;
+
+    padding-top: 11.4%;
 }
-.container {
-	max-width: 1170px;
-	padding: 0 15px;
-	margin: 0 auto;
+.container
+{
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
-.title {
-	text-transform: uppercase;
-	margin: 0 auto;
-	text-align: center;
+.title
+{
+    margin: 0 auto;
+
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.section-title {
-	margin: 0 auto 1.6%;
-	font-size: 28px;
-	font-weight: 700;
+.section-title
+{
+    font-size: 28px;
+    font-weight: 700;
+
+    margin: 0 auto 1.6%;
 }
-.caption {
-	margin: 0 auto 49px;
-	font-size: 15px;
-	line-height: 20px;
-	width: 38.5%;
-	text-align: center;
+.caption
+{
+    font-size: 15px;
+    line-height: 20px;
+
+    width: 38.5%;
+    margin: 0 auto 49px;
+
+    text-align: center;
 }
-.section--grey {
-	background-color: #f8f8f8;
+.section--grey
+{
+    background-color: #f8f8f8;
 }
-.slider-btn {}
-.row {
-	font-size: 0;
-	width: 100%;
+
+.row
+{
+    font-size: 0;
+
+    width: 100%;
 }
-.col-3, .col-4 {
-	display: inline-block;
-	font-size: 15px;
+.col-3,
+.col-4
+{
+    font-size: 15px;
+
+    display: inline-block;
 }
-.col-3 {
-	width: 25%;
+.col-3
+{
+    width: 25%;
 }
-.col-4 {
-	width: 33.33%
+.col-4
+{
+    width: 33.33%;
 }
