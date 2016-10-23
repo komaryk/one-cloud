@@ -1,4 +1,5 @@
-.section-services {
+.section-services
+{
     padding-bottom: 4%;
 }
 
@@ -69,4 +70,28 @@
 .service-icon-6
 {
     background-image: url(../pic/services/icon-camera-retro.png);
+}
+.service-icon-1:hover
+{
+    background-image: url(../pic/services/icon-jsfiddle--hover.png);
+}
+.service-icon-2:hover
+{
+    background-image: url(../pic/services/icon-pied-piper--hover.png);
+}
+.service-icon-3:hover
+{
+    background-image: url(../pic/services/icon-wordpress--hover.png);
+}
+.service-icon-4:hover
+{
+    background-image: url(../pic/services/icon-compass--hover.png);
+}
+.service-icon-5:hover
+{
+    background-image: url(../pic/services/icon-html5--hover.png);
+}
+.service-icon-6:hover
+{
+    background-image: url(../pic/services/icon-camera-retro--hover.png);
 }

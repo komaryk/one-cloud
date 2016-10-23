@@ -263,23 +263,23 @@
             </div>
             <div class="section section-figures">
                 <div class="container">
-                    <ul class="figures-list row">
-                        <li class="figures-item col-3">
+                    <ul class="figures-list">
+                        <li class="figures-item figures-item--work">
                             <h6 class="figures-title">
                                 <span>365</span>Work hard
                             </h6>
                         </li>
-                        <li class="figures-item col-3">
+                        <li class="figures-item figures-item--serv">
                             <h6 class="figures-title">
-                                <span>9</span>
+                                <span>9</span>Services
                             </h6>
                         </li>
-                        <li class="figures-item col-3">
+                        <li class="figures-item figures-item--team">
                             <h6 class="figures-title">
                                 <span>54</span>Support Team
                             </h6>
                         </li>
-                        <li class="figures-item col-3">
+                        <li class="figures-item figures-item--cliets">
                             <h6 class="figures-title">
                                 <span>5’795’598</span>Happy Customers
                             </h6>
@@ -449,10 +449,10 @@
                 <p class="caption">
                     Awesome services our team can offer. Lorem Ipsum passages, and more recently with desktop publishing software like OneCloud
                 </p>
-                <form method="post" name="contact">
-                    <input type="submit" value="Name" name="name">
-                    <input type="email" value="Email" name="email">
-                    <textarea placeholder="Your message" name="message">
+                <form method="post" name="contact" class="form">
+                    <input type="text" value="Name" name="name" class="form-name">
+                    <input type="email" value="Email" name="email" class="email">
+                    <textarea placeholder="Your message" name="message" class="comment" rows="5">Your message
                     </textarea>
                     <button class="btn btn-send">
                         Send message
@@ -483,10 +483,10 @@
                         <h6>
                             United Kingdom: 
                         </h6>
-                        <a href="#">
+                        <a href="#" class="mobile">
                             +84 (0) 9888 813 544
                         </a>
-                        <a href="mailto:Onecloud@mail.com">
+                        <a href="mailto:Onecloud@mail.com" class="mailto">
                             Onecloud@mail.com
                         </a>
                     </li>
@@ -511,7 +511,7 @@
                             Newsletter subscribe
                         </h4>
                         <form>
-                            <input type="email" name="email">
+                            <input type="email" name="email" class="subscribe">
                             <button class="btn btn-subscribe">
                                 Subscribe
                             </button>

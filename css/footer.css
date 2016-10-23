@@ -4,10 +4,9 @@
 }
 .footer-list
 {
-    // width: 103%;
     font-size: 0;
 
-    margin-bottom: 14%;
+    margin-bottom: 13%;
 }
 .footer-item
 {
@@ -48,6 +47,35 @@
     content: '';
 
     background-color: #0075d0;
+}
+
+.subscribe
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 34px;
+
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 5.6% 0 0;
+
+    color: #5a5a5a;
+    border: 1px solid #c0c0c0;
+    outline-style: none;
+}
+
+.mobile,
+.mailto
+{
+    display: inline-block;
+
+    margin-top: 15px;
+
+    text-decoration: none;
+
+    color: #6e6e6e;
 }
 .copyright
 {
