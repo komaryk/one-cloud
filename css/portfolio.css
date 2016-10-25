@@ -35,8 +35,9 @@
 }
 .categories
 {
-    width: 30%;
     margin: 4.3% auto;
+
+    text-align: center;
 
     background-color: #fff;
 }
