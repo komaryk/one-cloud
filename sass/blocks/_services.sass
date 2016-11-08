@@ -14,8 +14,11 @@
   text-decoration: none
   text-transform: uppercase
   color: #000
-  &:hover .service-title
-    color: #0075d0
+  &:hover 
+    .service-title
+      color: #0075d0
+    .icon-hover 
+      display: inline-block
 
 .service-icon
   width: 63%
@@ -28,35 +31,14 @@
   background-repeat: no-repeat
   background-position: 50%
   box-shadow: 0 4px #bebebe
-
-.service-icon-1
-  background-image: url(../pic/services/icon-jsfiddle.png)
-
-.service-icon-2
-  background-image: url(../pic/services/icon-pied-piper-alt.png)
-
-.service-icon-3
-  background-image: url(../pic/services/icon-wordpress.png)
-
-.service-icon-4
-  background-image: url(../pic/services/icon-compass.png)
-
-.service-icon-5
-  background-image: url(../pic/services/icon-html5.png)
-
-.service-icon-6
-  background-image: url(../pic/services/icon-camera-retro.png)
-
-.service-item:hover
-  .service-icon-1
-    background-image: url(../pic/services/icon-jsfiddle--hover.png)
-  .service-icon-2
-    background-image: url(../pic/services/icon-pied-piper--hover.png)
-  .service-icon-3
-    background-image: url(../pic/services/icon-wordpress--hover.png)
-  .service-icon-4
-    background-image: url(../pic/services/icon-compass--hover.png)
-  .service-icon-5
-    background-image: url(../pic/services/icon-html5--hover.png)
-  .service-icon-6
-    background-image: url(../pic/services/icon-camera-retro--hover.png)
+  position: relative
+  
+  .icon
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+    &-hover
+      display: none

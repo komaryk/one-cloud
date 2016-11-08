@@ -20,26 +20,50 @@
   background-size: cover
   background-repeat: no-repeat
   float: left
+  position: relative
+  &:after
+    position: absolute
+    top: 50%
+    margin-top: -7px
+    right: 0
+    width: 0
+    height: 0
+    content: ''
+    border-right: 15px solid #fff
+    border-top: 15px solid transparent
+    border-bottom: 15px solid transparent
   &--right
     float: right
+    &:after
+      position: absolute
+      top: 50%
+      left: 0
+      width: 0
+      height: 0
+      content: ''
+      border-right: none
+      border-left: 15px solid #fff
+      border-top: 15px solid transparent
+      border-bottom: 15px solid transparent
   
 .post-text
   width: 50%
   float: left
   &--right
     float: right
+  
 
 .post-img-1
-  background-image: url(../img/blog-img-1.png)
+  background-image: url(../images/blog-img-1.png)
 
 .post-img-2
-  background-image: url(../img/blog-img-2.png)
+  background-image: url(../images/blog-img-2.png)
 
 .post-img-3
-  background-image: url(../img/blog-img-3.png)
+  background-image: url(../images/blog-img-3.png)
 
 .post-img-4
-  background-image: url(../img/blog-img-4.png)
+  background-image: url(../images/blog-img-4.png)
 
 .post-title
   font-size: 19px

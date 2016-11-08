@@ -8,9 +8,25 @@
 .team-member
   font-size: 15px
   display: inline-block
-  box-sizing: border-box
-  width: 25%
-  padding: 15px
+  position: relative
+  width: 22.5%
+  margin: 1.25%
+  &:hover .social
+    display: block
+
+.social
+  display: none
+  position: absolute
+  left: 0
+  
+  .icon
+    margin-top: 11px
+    transition-duration: 0.3s
+    transition-property: transform
+    transition-timing-function: ease-in-out
+    &:hover
+      transform: translateX(8px)
+      cursor: pointer
 
 .team-image
   width: 100%
