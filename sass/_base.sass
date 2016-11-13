@@ -7,7 +7,7 @@
   padding-top: 11.4%
 
 .container
-  width: 1170px
+  max-width: 1170px
   margin: 0 auto
   padding: 0 15px
 
@@ -24,9 +24,13 @@
 .caption
   font-size: 15px
   line-height: 20px
-  width: 38.5%
+  width: 85%
+  max-width: 450px
   margin: 0 auto 49px
   text-align: center
+    
+  @include desktop
+    width: 38.5%
 
 .section--grey
   background-color: #f8f8f8

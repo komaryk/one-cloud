@@ -42,22 +42,24 @@
   position: relative
   display: inline-block
   width: 25%
-  &:hover
-    background-color: rgba(6, 6, 6, 0.84)
+  @include desktop  
+    &:hover
+      background-color: rgba(6, 6, 6, 0.84)
   img
     position: relative
     z-index: -2
     width: 100%
-  &:hover :after
-    font-size: 56px
-    font-weight: 100
-    position: absolute
-    z-index: 99
-    top: 0
-    right: 0
-    width: 56px
-    height: 56px
-    content: '+'
-    text-align: center
-    color: #fff
-    background-color: #0075d0
+  @include desktop
+    &:hover :after
+      font-size: 56px
+      font-weight: 100
+      position: absolute
+      z-index: 99
+      top: 0
+      right: 0
+      width: 56px
+      height: 56px
+      content: '+'
+      text-align: center
+      color: #fff
+      background-color: #0075d0

@@ -24,7 +24,9 @@
   background-color: #fff
 
 .logo
-  float: left
+  position: absolute
+  top: -3px
+  left: 15px
   vertical-align: middle
   text-decoration: none
   color: #000
@@ -47,27 +49,45 @@
   font-size: 14px
   display: inline-block
   box-sizing: border-box
-  margin: 0 15px
+  margin: 0 1.3%
   padding: 0 5px
   text-decoration: none
   text-transform: uppercase
   color: #000
+  line-height: 14px
   border-left: 5px solid transparent
-  &:hover
-    border-left: 5px solid #0075d0
+  @include tablet 
+    margin: 0
+  @include mobile-l
+    display: none
+  @include mobile
+    display: none
+  @include desktop
+    &:hover
+      border-left: 5px solid #0075d0
 
 .nav-item--icon
   border: none
   &:hover
     border: none
 
+.nav-item--menu 
+  display: none
+  line-height: 25px
+  
+  @include mobile-l
+    display: inline-block
+  @include mobile
+    display: inline-block
+
+
 .search
-  line-height: 22px
-  display: inline-block
+  // display: inline-block
   padding: 3px 5px 0
   -webkit-border-radius: 50%
   border-radius: 50%
   background-color: #0075d0
+  line-height: 22px
 
 .page-title
   font-family: 'Open Sans', sans-serif
@@ -75,6 +95,10 @@
   font-weight: 700
   margin-top: 31.7%
   color: #fff
+  @include mobile-l
+    font-size: 32px
+  @include mobile
+    font-size: 26px
 
 .page-subtitle
   font-family: 'Open Sans', sans-serif
@@ -82,3 +106,7 @@
   font-weight: 400
   margin-top: 1.4%
   color: #fff
+  @include mobile-l
+    font-size: 22px
+  @include mobile
+    font-size: 17px
