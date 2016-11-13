@@ -10,16 +10,24 @@
   position: relative
   width: 22.5%
   margin: 1.25%
-  &:hover .social
-    display: block
+  @include mobile
+    width: 59%
+  @include mobile-l
+    width: 36%
+  @include desktop
+    &:hover .social
+      display: block
 
 .social
   display: none
-  position: absolute
-  left: 0
+  @include desktop
+    position: absolute
+    left: 0
+    top: 50%
+    margin-top: -185px
   
   .icon
-    margin-top: 11px
+    margin-top: 3%
     transition-duration: 0.3s
     transition-property: transform
     transition-timing-function: ease-in-out

@@ -11,46 +11,45 @@
   width: 50%
   vertical-align: top
   background-color: #fff
-
+  position: relative
+  &:nth-of-type(3) > .post-img, &:nth-of-type(4) > .post-img
+    float: right
+  @include mobile
+    width: 100%
+    &:nth-of-type(even) > .post-img
+      float: right
+    &:nth-of-type(odd) > .post-img
+      float: left
+  @include mobile-l
+    width: 100%
+    &:nth-of-type(even) > .post-img
+      float: right
+    &:nth-of-type(odd) > .post-img
+      float: left
+    
 .post-img
   width: 50%
   height: 0
-  padding-top: 34.5%
+  padding-top: 202px
   background-position: 50%
   background-size: cover
   background-repeat: no-repeat
   float: left
-  position: relative
   &:after
     position: absolute
     top: 50%
-    margin-top: -7px
+    left: 0
     right: 0
-    width: 0
-    height: 0
+    margin: -15px auto 0
+    width: 30px
+    height: 30px
     content: ''
-    border-right: 15px solid #fff
-    border-top: 15px solid transparent
-    border-bottom: 15px solid transparent
-  &--right
-    float: right
-    &:after
-      position: absolute
-      top: 50%
-      left: 0
-      width: 0
-      height: 0
-      content: ''
-      border-right: none
-      border-left: 15px solid #fff
-      border-top: 15px solid transparent
-      border-bottom: 15px solid transparent
+    transform: rotate(45deg)
+    background-color: #FFF 
   
 .post-text
   width: 50%
   float: left
-  &--right
-    float: right
   
 
 .post-img-1
@@ -68,12 +67,14 @@
 .post-title
   font-size: 19px
   padding: 19px
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
 
 .post-caption
   font-size: 15px
   overflow: hidden
-  height: 75px
-  padding: 0 25px 30px 20px
-  white-space: nowrap
-  text-overflow: ellipsis
+  max-height: 75px
+  margin: 0 25px 30px 20px
+  line-height: 20px
   color: #6e6e6e

@@ -31,10 +31,11 @@
 
 .section-figures
   z-index: -2
-  padding-top: 3.8%
+  padding-top: 0
   padding-bottom: 4%
   background-image: url(../images/bg-figures.jpg)
   background-position: 50%
+  margin-bottom: 1px
   &:after
     position: absolute
     z-index: -1
@@ -47,6 +48,7 @@
 
 .figures-list
   font-size: 0
+  text-align: center
 
 .figures-item
   font-size: 19px
@@ -54,11 +56,23 @@
   width: 25%
   text-align: center
   color: white
+  vertical-align: text-top
+  margin-top: 4%
+  @include mobile-l
+    width: 40%
+  @include mobile
+    width: 50%
+    margin: 8% auto
+    font-size: 16px
   span
-    font-size: 50px
+    font-size: 40px
     font-weight: 700
     display: block
     margin: 8% auto 6%
+    @include desktop
+      font-size: 50px
+    @include mobile
+      font-size: 22px
   .icon
     display: block
     margin: 0 auto
