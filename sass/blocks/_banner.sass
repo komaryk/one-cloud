@@ -1,10 +1,14 @@
 .banner
   z-index: 0
   padding-top: 0
-  padding-bottom: 15.5%
+  padding-bottom: 16%
+  background-color: #000 
   background-image: url(../images/bg-main-1.jpg)
   background-position: 50%
   background-size: cover
+  @include desktop
+    padding-bottom: 7%
+    
   &:before
     position: absolute
     z-index: -1
@@ -22,28 +26,73 @@
   text-align: right
   opacity: .8
   background-color: #fff
+  min-height: 75px
 
 .logo
   position: absolute
-  top: -3px
   left: 15px
-  vertical-align: middle
-  text-decoration: none
-  color: #000
   img
     position: relative
     top: 20px
+    @include mobile-l
+      top: 8px
+    @include mobile
+      top: 8px
 
-.logo-title
-  font-size: 26px
-  display: inline
-  span
-    font-weight: 700
-    margin-left: 5px
+.burger 
+  @include mobile
+    position: absolute
+    top: 29px
+    right: 25px
+    width: 29px
+    height: 13px
+    border: 0
+    border-top: 3px solid #000
+    border-bottom: 3px solid #000
+    cursor: pointer
+    &:hover
+      opacity: 0.9
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0
+      width: 100%
+      margin-top: -2px
+      border-bottom: 3px solid #000
 
+#menu-btn
+  display: none
+  &:checked
+    + label
+      opacity: 0.7
+
+#menu-btn:checked
+  ~ .nav
+    visibility: visible
+    opacity: 1
+    transform: translateY(0)
+    padding: 0
+    background-color: #fff
+    position: absolute
+    width: 100%
+    left: 0
+    top: 75px
+    .nav-item:not(.nav-item--icon)
+      display: block
+      text-align: center
+      line-height: 50px
+      
+        
+  
 .nav
   font-size: 0
   padding: 37px 0 38px
+  @include mobile   
+    visibility: hidden
+    opacity: 0
+    transform: translateY(-100%)
+    transition: all 0.5s ease-out
 
 .nav-item
   font-size: 14px
@@ -58,8 +107,6 @@
   border-left: 5px solid transparent
   @include tablet 
     margin: 0
-  @include mobile-l
-    display: none
   @include mobile
     display: none
   @include desktop
@@ -71,18 +118,8 @@
   &:hover
     border: none
 
-.nav-item--menu 
-  display: none
-  line-height: 25px
-  
-  @include mobile-l
-    display: inline-block
-  @include mobile
-    display: inline-block
-
 
 .search
-  // display: inline-block
   padding: 3px 5px 0
   -webkit-border-radius: 50%
   border-radius: 50%
@@ -93,12 +130,14 @@
   font-family: 'Open Sans', sans-serif
   font-size: 40px
   font-weight: 700
-  margin-top: 31.7%
+  margin-top: 31%
   color: #fff
   @include mobile-l
     font-size: 32px
-  @include mobile
+  @include mobile-s
     font-size: 26px
+  @include desktop
+    margin-top: 15%
 
 .page-subtitle
   font-family: 'Open Sans', sans-serif
@@ -108,5 +147,5 @@
   color: #fff
   @include mobile-l
     font-size: 22px
-  @include mobile
+  @include mobile-s
     font-size: 17px

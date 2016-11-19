@@ -34,9 +34,6 @@
 	overflow: hidden;
 	position: relative;
 	width: 100%;
-	// font-size: 0;
-	// margin: 125px auto 57px;
-	// text-align: center;
 }
 .owl-carousel .owl-wrapper-outer.autoHeight{
 	-webkit-transition: height 500ms ease-in-out;

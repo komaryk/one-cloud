@@ -20,10 +20,10 @@
                 <div class="container">
                     <a href="index.html" class="logo">
                         <img src="pic/logo.png" alt="One Cloud">
-                        <h2 class="title logo-title">
-                            <span>One</span> Cloud
-                        </h2>
                     </a>
+                    <input type="checkbox" id="menu-btn">
+                    <label for="menu-btn" class="burger"></label>
+
                     <nav class="nav">
                         <a href="index.html" class="nav-item">
                             Home
@@ -42,8 +42,6 @@
                         </a>
                         <a href="#form" class="nav-item">
                             Contact
-                        </a>
-                        <a href="#" class="nav-item nav-item--menu">menu
                         </a>
                         <a href="#" class="nav-item nav-item--icon">
                             <img src="pic/cart.png" alt="buy">
@@ -348,25 +346,25 @@
                         <li class="figures-item figures-item--work">
                             <i class="icon icon-history"></i>
                             <h6 class="figures-title">
-                                <span>365</span>Work hard
+                                <span class="timer" data-to="365" data-speed="1500">365</span>Work hard
                             </h6>
                         </li>
                         <li class="figures-item figures-item--serv">
                             <i class="icon icon-gear"></i>
                             <h6 class="figures-title">
-                                <span>9</span>Services
+                                <span class="timer" id="count-number" data-to="9" data-speed="1500">9</span>Services
                             </h6>
                         </li>
                         <li class="figures-item figures-item--team">
                             <i class="icon icon-group"></i>
                             <h6 class="figures-title">
-                                <span>54</span>Support Team
+                                <span class="timer" id="count-number" data-to="54" data-speed="1500">54</span>Support Team
                             </h6>
                         </li>
                         <li class="figures-item figures-item--cliets">
                             <i class="icon icon-love"></i>
                             <h6 class="figures-title">
-                                <span>5’795’598</span>Happy Customers
+                                <span class="timer" id="count-number" data-to="5795598" data-speed="1500">5’795’598</span>Happy Customers
                             </h6>
                         </li>
                     </ul>
@@ -384,6 +382,7 @@
                 </p>
                 <ul class="team-list">
                     <li class="team-member">
+                        <img src="images/brad-pitt.png" alt="BRAD PITT" class="team-image">
                         <ul class="social">
                             <li>
                                 <i class="icon icon-soc-twitter"></i>
@@ -401,7 +400,6 @@
                                 <i class="icon icon-soc-behance"></i>
                             </li>
                         </ul>
-                        <img src="images/brad-pitt.png" alt="BRAD PITT" class="team-image">
                         <h5 class="title team-name">
                             BRAD PITT
                         </h5>
@@ -410,6 +408,7 @@
                         </h6>
                     </li>
                     <li class="team-member">
+                        <img src="images/christina.png" alt="CRISTINA" class="team-image">
                         <ul class="social">
                             <li>
                                 <i class="icon icon-soc-twitter"></i>
@@ -427,7 +426,6 @@
                                 <i class="icon icon-soc-behance"></i>
                             </li>
                         </ul>
-                        <img src="images/christina.png" alt="CRISTINA" class="team-image">
                         <h5 class="title team-name">
                             CRISTINA
                         </h5>
@@ -436,6 +434,7 @@
                         </h6>
                     </li>
                     <li class="team-member">
+                        <img src="images/orlando.png" alt="OLANDO" class="team-image">
                         <ul class="social">
                             <li>
                                 <i class="icon icon-soc-twitter"></i>
@@ -453,7 +452,6 @@
                                 <i class="icon icon-soc-behance"></i>
                             </li>
                         </ul>
-                        <img src="images/orlando.png" alt="OLANDO" class="team-image">
                         <h5 class="title team-name">
                             OLANDO
                         </h5>
@@ -462,6 +460,7 @@
                         </h6>
                     </li>
                     <li class="team-member">
+                        <img src="images/drad-pitt.png" alt="DRAD PITT" class="team-image">
                         <ul class="social">
                             <li>
                                 <i class="icon icon-soc-twitter"></i>
@@ -479,7 +478,6 @@
                                 <i class="icon icon-soc-behance"></i>
                             </li>
                         </ul>
-                        <img src="images/drad-pitt.png" alt="DRAD PITT" class="team-image">
                         <h5 class="title team-name">
                             DRAD PITT
                         </h5>
@@ -696,8 +694,109 @@
             </div>
         </footer>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="owl-carousel/owl.carousel.js"></script>
+    <script>
+        (function ($) {
+    $.fn.countTo = function (options) {
+        options = options || {};
+        
+        return $(this).each(function () {
+            // set options for current element
+            var settings = $.extend({}, $.fn.countTo.defaults, {
+                from:            $(this).data('from'),
+                to:              $(this).data('to'),
+                speed:           $(this).data('speed'),
+                refreshInterval: $(this).data('refresh-interval'),
+                decimals:        $(this).data('decimals')
+            }, options);
+            
+            // how many times to update the value, and how much to increment the value on each update
+            var loops = Math.ceil(settings.speed / settings.refreshInterval),
+                increment = (settings.to - settings.from) / loops;
+            
+            // references & variables that will change with each update
+            var self = this,
+                $self = $(this),
+                loopCount = 0,
+                value = settings.from,
+                data = $self.data('countTo') || {};
+            
+            $self.data('countTo', data);
+            
+            // if an existing interval can be found, clear it first
+            if (data.interval) {
+                clearInterval(data.interval);
+            }
+            data.interval = setInterval(updateTimer, settings.refreshInterval);
+            
+            // initialize the element with the starting value
+            render(value);
+            
+            function updateTimer() {
+                value += increment;
+                loopCount++;
+                
+                render(value);
+                
+                if (typeof(settings.onUpdate) == 'function') {
+                    settings.onUpdate.call(self, value);
+                }
+                
+                if (loopCount >= loops) {
+                    // remove the interval
+                    $self.removeData('countTo');
+                    clearInterval(data.interval);
+                    value = settings.to;
+                    
+                    if (typeof(settings.onComplete) == 'function') {
+                        settings.onComplete.call(self, value);
+                    }
+                }
+            }
+            
+            function render(value) {
+                var formattedValue = settings.formatter.call(self, value, settings);
+                $self.html(formattedValue);
+            }
+        });
+    };
+    
+    $.fn.countTo.defaults = {
+        from: 0,               // the number the element should start at
+        to: 0,                 // the number the element should end at
+        speed: 1000,           // how long it should take to count between the target numbers
+        refreshInterval: 100,  // how often the element should be updated
+        decimals: 0,           // the number of decimal places to show
+        formatter: formatter,  // handler for formatting the value before rendering
+        onUpdate: null,        // callback method for every time the element is updated
+        onComplete: null       // callback method for when the element finishes updating
+    };
+    
+    function formatter(value, settings) {
+        return value.toFixed(settings.decimals);
+    }
+}(jQuery));
+
+jQuery(function ($) {
+  // custom formatting example
+  $('#count-number').data('countToOptions', {
+    formatter: function (value, options) {
+      return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+    }
+  });
+  
+  // start all the timers
+  $('.timer').each(count);  
+  
+  function count(options) {
+    var $this = $(this);
+    options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+    $this.countTo(options);
+  }
+});
+    </script>
     <script>
         $(document).ready(function() {
  
@@ -708,7 +807,6 @@
         itemsTablet: [600,1],
         itemsMobile : false,
       });
-
       $(".clients-list").owlCarousel({
         items: 4,
         // itemsDesktop: [1024,4],

@@ -1,6 +1,7 @@
 .section-portfolio
   z-index: -2
   padding-bottom: 1px
+  background-color: #16191C 
   background-image: url(../images/bg-portfolio.jpg)
   background-position: 50%
   background-size: cover
@@ -12,6 +13,7 @@
     bottom: 0
     left: 0
     content: ''
+    background-color: rgba(0, 0, 0, 0.76)
     background-image: url(../images/dotted-pattern.png)
     background-repeat: no-repeat
     background-size: cover
@@ -28,12 +30,14 @@
   font-size: 15px
   margin: 0 15px
   padding: 0 5px
+  line-height: 35px
   text-decoration: none
   text-transform: uppercase
   color: #000
   border-bottom: 5px solid transparent
-  &:hover
-    border-bottom: 5px solid #0075d0
+  @include desktop
+    &:hover
+      border-bottom: 5px solid #0075d0
 
 .portfolio
   font-size: 0
