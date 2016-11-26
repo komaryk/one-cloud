@@ -2,9 +2,11 @@
 @import "core/_variables.scss";
 @import "core/_mixin.scss";
 @import "_base.sass";
+@import "fa/_font-awesome.scss";
 @import "_icon.scss";
 @import "blocks/_banner.sass";
 @import "components/_buttons.sass";
+@import "components/_animations.scss";
 @import "blocks/_services.sass";
 @import "blocks/_portfolio.sass";
 @import "blocks/_testimonials.sass";

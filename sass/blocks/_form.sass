@@ -66,6 +66,7 @@
 .social-item
   display: inline-block
   box-sizing: border-box
+  cursor: pointer
   width: 15%
   min-width: 50px
   height: 15%
@@ -75,6 +76,10 @@
   border: 2px solid white
   border-radius: 50%
   position: relative
+  transition: all 0.3s
+  @include desktop
+    &:hover
+      background-color: #0075d0
   @include mobile-s
     margin: 3%
   .icon
@@ -84,6 +89,3 @@
     left: 0
     right: 0
     margin: auto
-
-.social-item:hover
-  background-color: #0075d0

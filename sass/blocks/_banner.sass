@@ -70,7 +70,7 @@
 #menu-btn:checked
   ~ .nav
     visibility: visible
-    opacity: 1
+    opacity: 0.8
     transform: translateY(0)
     padding: 0
     background-color: #fff
@@ -82,9 +82,7 @@
       display: block
       text-align: center
       line-height: 50px
-      
         
-  
 .nav
   font-size: 0
   padding: 37px 0 38px
@@ -104,6 +102,7 @@
   text-transform: uppercase
   color: #000
   line-height: 14px
+  transition: all 0.3s
   border-left: 5px solid transparent
   @include tablet 
     margin: 0

@@ -18,6 +18,8 @@
   @include desktop
     &:hover .social
       display: block
+      animation-name: fadeInDown
+      animation-duration: 1s
 
 .social
   width: 100%
@@ -33,15 +35,13 @@
     li
       display: block
       &:hover .icon
-        transform: translateX(8px)
         cursor: pointer
+        animation-name: pulse
+        animation-duration: 1s
   
 
   .icon
     margin-top: 35%
-    transition-duration: 0.3s
-    transition-property: transform
-    transition-timing-function: ease-in-out
     
   
 
