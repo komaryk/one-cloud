@@ -19,10 +19,12 @@
 .down-btn
   font-size: 15px
   margin-top: 15%
-  padding: 14px 11px
-  border: 6px double #7a7373
-  border-radius: 50%
   background-color: transparent
+  color: #FFF
+  .fa
+    border: 6px double #7a7373
+    border-radius: 50% 
+    padding: 14px
   @include desktop
     margin-top: 9%
 
@@ -46,6 +48,10 @@
 .career-btn
   line-height: 30px
   margin-top: 4%
+  transition: all 0.3s
+  &:hover
+    background-color: #fff
+    color: #0075D0  
 
 .carousel--large
   width: 112px

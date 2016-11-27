@@ -50,42 +50,33 @@
 .section-social
   padding: 35px 0
   background-color: #000
+  color: #FFF 
 
 .social-list
   font-size: 0
-  width: 41%
   margin: 0 auto
   text-align: center
-  @include mobile-s
-    width: 100%
-  @include mobile-l
-    width: 75%
-  @include tablet
-    width: 55%
-
+  
 .social-item
   display: inline-block
+  font-size: 36px
   box-sizing: border-box
   cursor: pointer
-  width: 15%
-  min-width: 50px
-  height: 15%
-  min-height: 50px
-  margin: 5%
-  padding-top: 14.3%
+  width: 80px
+  height: 80px
+  margin: 2%
+  padding: 16px
   border: 2px solid white
   border-radius: 50%
-  position: relative
   transition: all 0.3s
+  .fa
+    vertical-align: middle
   @include desktop
     &:hover
       background-color: #0075d0
   @include mobile-s
     margin: 3%
-  .icon
-    position: absolute
-    top: 0
-    bottom: 0
-    left: 0
-    right: 0
-    margin: auto
+    width: 50px
+    height: 50px
+    font-size: 24px
+    padding: 8px

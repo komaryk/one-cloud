@@ -17,7 +17,9 @@
     width: 36%
   @include desktop
     &:hover .social
-      display: block
+      display: flex
+      flex-direction: column
+      justify-content: space-between
       animation-name: fadeInDown
       animation-duration: 1s
 
@@ -25,23 +27,51 @@
   width: 100%
   li
     display: inline-block
+  .fa
+    font-size: 20px
+    padding: 7px
+    color: #fff 
+    margin-top: 35%
+    // background-color: #333
+    width: 35px
+    height: 35px
+    box-sizing: border-box
+  .fa-twitter
+    background-color: #359BED 
+  .fa-linkedin-square
+    background-color: #069 
+  .fa-flickr
+    background-color: #FF0084 
+  .fa-facebook
+    background-color: #3C5B9B 
+  .fa-behance
+    background-color: #2D9AD2
   @include desktop
     display: none
     position: absolute
     width: initial 
     left: 0
-    top: 50%
-    margin-top: -185px
+    top: 0
+    bottom: 118px
+    // margin-top: -185px
     li
       display: block
-      &:hover .icon
-        cursor: pointer
-        animation-name: pulse
-        animation-duration: 1s
+      .fa
+        font-size: 28px
+        padding: 12px
+        color: #fff 
+        width: 50px
+        height: 50px
+        margin: 0
+      &:hover 
+        .fa
+          cursor: pointer
+          animation-name: pulse
+          animation-duration: 1s
   
 
-  .icon
-    margin-top: 35%
+  // .fa
+    // margin-top: 35%
     
   
 
